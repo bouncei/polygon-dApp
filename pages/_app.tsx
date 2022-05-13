@@ -34,7 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <>
 
+
         <Header />
+
+
+        <LoadingScreen loading={loading} />
         <Component {...pageProps} />
         <Footer />
 
