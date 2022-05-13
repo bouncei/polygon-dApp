@@ -7,10 +7,10 @@ const Home: NextPage = () => {
   return (
     <>
 
-      <Header />
+      {/* <Header /> */}
 
 
-      <Footer />
+      {/* <Footer /> */}
     </>
 
   )
