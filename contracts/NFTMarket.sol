@@ -1,4 +1,4 @@
-// SPDX-Lincense-Identifier: MIT
+// SPDX-License-Identifier: MIT
 
 
 pragma solidity ^0.8.4;
@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 
-contract NFTMaket is ReentrancyGuard {
+contract NFTMarket is ReentrancyGuard {
     using Counters for Counters.Counter;
 
     Counters.Counter private _itemIds;
@@ -49,7 +49,7 @@ contract NFTMaket is ReentrancyGuard {
         return listingPrice;
     }
 
-    function creteMarketitem(
+    function createMarketItem(
         address nftContract,
         uint256 tokenId,
         uint256 price
@@ -97,7 +97,78 @@ contract NFTMaket is ReentrancyGuard {
     }
 
 
-    // Remaining 3 functions
+    function fetchMarketItems() public view returns (MarketItem[] memory) {
+        uint itemCount = _itemIds.current();
+        uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
+        
+        uint currentIndex = 0;
+
+        MarketItem[] memory items = new MarketItem[](unsoldItemCount);
+        for (uint i = 0; i < itemCount; i++) {
+            if(idToMarketItem[i + 1].owner == address(0)) {
+                uint currentId = idToMarketItem[i + 1].itemId;
+                MarketItem storage currentItem = idToMarketItem[currentId];
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            }
+
+            
+        }
+
+        return items;
+    }
+
+    function fetchMyNFTs() public view returns (MarketItem[] memory) {
+        uint totalItemCount = _itemIds.current();
+        uint itemCount = 0;
+        uint currentIndex = 0;
+
+        for (uint i = 0; i < totalItemCount; i++) {
+            if (idToMarketItem[i + 1].owner == msg.sender) {
+                itemCount += 1;
+            }
+            
+        }
+
+        MarketItem[] memory items = new MarketItem[](itemCount);
+            for (uint i = 0; i < totalItemCount; i++) {
+            if(idToMarketItem[i + 1].owner == msg.sender) {
+                uint currentId = idToMarketItem[i + 1].itemId;
+                MarketItem storage currentItem = idToMarketItem[currentId];
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            }
+
+            
+        }
+
+    }
+
+    function fetchItemsCreated() public view returns (MarketItem[] memory) {
+        uint totalItemCount = _itemIds.current();
+        uint itemCount = 0;
+        uint currentIndex = 0;
+
+        for (uint i = 0; i < totalItemCount; i++) {
+            if (idToMarketItem[i + 1].seller == msg.sender) {
+                itemCount += 1;
+            }
+            
+        }
+
+        MarketItem[] memory items = new MarketItem[](itemCount);
+        for (uint i = 0; i < totalItemCount; i++) {
+            if(idToMarketItem[i + 1].seller == msg.sender) {
+                uint currentId = idToMarketItem[i + 1].itemId;
+                MarketItem storage currentItem = idToMarketItem[currentId];
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            }
+
+            
+        }
+        return items;
+    }
 
 
 }
