@@ -53,3 +53,6 @@ artifacts
 
 
 .env*.local
+
+.hardhat*.config
+hardhat.config
