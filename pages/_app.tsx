@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LoadingScreen from "../components/preloader/LoadingScreen";
-
+import Hero from '../components/Hero'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -36,11 +36,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
         <Header />
+        {/* <Hero /> */}
+
 
 
         <LoadingScreen loading={loading} />
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
 
       </>
     </div>

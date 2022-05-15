@@ -1,7 +1,3 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Hero from '../components/Hero'
-
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -76,11 +72,10 @@ const Home = () => {
   }
 
   if (loadingState === 'loaded' && !nfts.length)
-    return <h1 className="px-20 py-10 text-3xl">No items in the marketplace</h1>
+    return <h1 className="px-20 py-10 text-3xl">No NFTs in the marketplace</h1>
 
   return (
     <>
-      <Hero />
       <div className="flex justify-center">
         <div className="max-w-screen-2xl px-4">
           <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -114,8 +109,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   )
 }
