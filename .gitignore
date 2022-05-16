@@ -52,7 +52,7 @@ artifacts
 *.secret
 
 
-.env*.local
+# .env*.local
 
 # .hardhat*.config
 # hardhat.config

@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Web3Modal, { themesList } from 'web3modal'
+import Web3Modal from 'web3modal'
 
 import { nftaddress, nftmarketaddress } from '../config'
 
