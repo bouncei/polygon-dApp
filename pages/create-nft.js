@@ -60,7 +60,7 @@ export default function CreateItem() {
     }
   }
 
-  async function CreateSale() {
+  async function CreateSale(url) {
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
@@ -101,7 +101,7 @@ export default function CreateItem() {
           />
           <textarea
             placeholder="NFT Description"
-            className="mt-2 rounded border p-4"
+            className="mt-2 rounded-lg border p-4"
             onChange={(e) =>
               updateFormInput({ ...formInput, description: e.target.value })
             }
@@ -109,17 +109,23 @@ export default function CreateItem() {
 
           <input
             placeholder="NFT Price in Matic"
-            className="mt-2 rounded border p-4"
+            className="mt-2 rounded-lg border p-4"
             onChange={(e) =>
               updateFormInput({ ...formInput, price: e.target.value })
             }
           />
 
           <input type="file" name="NFT" className="my-4" onChange={onChange} />
+          {fileUrl && (
+            <img
+              className="mt-4 h-80 w-80 rounded-lg object-contain"
+              src={fileUrl}
+            />
+          )}
 
           <button
             onClick={createItem}
-            className="bg-purple sha mt-4 rounded p-4 font-bold text-white shadow-lg"
+            className="mt-4 rounded-lg bg-[#363840] p-4 font-bold text-white shadow-lg hover:bg-[#555861]"
           >
             Create Digital Asset
           </button>

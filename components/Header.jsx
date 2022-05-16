@@ -59,8 +59,11 @@ const Header = () => {
           <Link href="/collection">
             <div className={style.headerItem}>Sell Assets</div>
           </Link>
+
+          <Link href="/dashboard">
+            <div className={style.headerItem}>Dashboard</div>
+          </Link>
           <div className={style.headerItem}>My Assets</div>
-          <div className={style.headerItem}>Dashboard</div>
         </div>
 
         {/* Connect MetaMask Wallet Button */}

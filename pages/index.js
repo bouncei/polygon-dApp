@@ -8,6 +8,7 @@ import { nftaddress, nftmarketaddress } from '../config'
 // Importing the ContractABIs
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+import Hero from '../components/Hero'
 const Home = () => {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
@@ -76,7 +77,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex justify-center">
+      <Hero />
+      <div className="mt-10 flex justify-center">
         <div className="max-w-screen-2xl px-4">
           <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
             {nfts.map((item, index) => (
@@ -84,7 +86,9 @@ const Home = () => {
                 key={index}
                 className="overflow-hidden rounded-xl border shadow"
               >
-                <img src={item.image} />
+                <div className="flex justify-center">
+                  <img src={item.image} className=" h-[30vh] object-cover" />
+                </div>
 
                 <div className="p-4">
                   <p className="h-16 text-2xl font-semibold">{item.name}</p>
