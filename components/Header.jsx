@@ -54,8 +54,12 @@ const Header = () => {
           </Link>
 
           <Link href="/create-nft">
-            <div className={style.headerItem}>Explore</div>
+            <div className={style.headerItem}>Create Asset</div>
           </Link>
+          <Link href="/my-nfts">
+            <div className={style.headerItem}>My Assets</div>
+          </Link>
+
           <Link href="/collection">
             <div className={style.headerItem}>Sell Assets</div>
           </Link>
@@ -63,7 +67,6 @@ const Header = () => {
           <Link href="/dashboard">
             <div className={style.headerItem}>Dashboard</div>
           </Link>
-          <div className={style.headerItem}>My Assets</div>
         </div>
 
         {/* Connect MetaMask Wallet Button */}

@@ -63,7 +63,7 @@ const Home = () => {
 
     const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
 
-    const transaction = await contract.CreateMarketSale(
+    const transaction = await contract.createMarketSale(
       nftaddress,
       nft.tokenId,
       { value: price }
@@ -99,7 +99,7 @@ const Home = () => {
 
                 <div className="bg-black p-4">
                   <p className="mb-4 text-2xl font-bold text-white">
-                    {item.price} Matic
+                    {item.price} MATIC
                   </p>
                   <button
                     className="w-full rounded bg-red-400 py-2 px-12 font-bold text-white"
