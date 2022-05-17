@@ -60,10 +60,6 @@ const Header = () => {
             <div className={style.headerItem}>My Assets</div>
           </Link>
 
-          <Link href="/collection">
-            <div className={style.headerItem}>Sell Assets</div>
-          </Link>
-
           <Link href="/dashboard">
             <div className={style.headerItem}>Dashboard</div>
           </Link>

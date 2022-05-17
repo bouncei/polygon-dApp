@@ -71,12 +71,12 @@ function Dashboard() {
               <div className="flex justify-center">
                 <img
                   src={nft.image}
-                  className=" aspect-square   rounded object-cover md:aspect-auto md:h-[30vh]"
+                  className=" h-full w-full rounded object-cover md:aspect-auto md:h-[30vh]"
                 />
               </div>
-              <div className="bg-black p-4">
+              <div className="bg-[#d279d2] p-4">
                 <p className="text-2xl font-bold text-white">
-                  Price - {nft.price} Eth
+                  Price - {nft.price} MATIC
                 </p>
               </div>
             </div>

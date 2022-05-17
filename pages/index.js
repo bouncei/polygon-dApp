@@ -88,6 +88,7 @@ const Home = () => {
                 description={item.description}
                 name={item.name}
                 item={item}
+                price={item.price}
                 buyNft={() => buyNft(item)}
               />
             ))}

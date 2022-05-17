@@ -114,16 +114,16 @@ function Footer() {
         </div>
       </div>
 
-      <div className={style.mainContainer}>
+      <div className=" space-x-4 bg-white px-[40px] py-14 text-gray-600 md:px-[45px] lg:px-[55px] xl:px-32">
         <div className="text-grey-800">
-          <div>
-            © Copyright 2022 &nbsp;
+          <div className="flex items-center justify-between">
+            <p>© BaseMarket 2022, Inc</p>
             <Link href="/">
               <span className="cursor-pointer hover:text-[#0198E1] hover:underline">
-                BaseMint
+                Back To Top
               </span>
             </Link>
-            &nbsp; -All Rights Reserved
+            All Rights Reserved
           </div>
         </div>
 

@@ -125,7 +125,7 @@ export default function CreateItem() {
 
           <button
             onClick={createItem}
-            className="mt-4 rounded-lg bg-[#363840] p-4 font-bold text-white shadow-lg hover:bg-[#555861]"
+            className="mt-4 rounded-lg bg-[#BF40BF] p-4 font-bold text-white shadow-lg hover:bg-[#d279d2]"
           >
             Create Digital Asset
           </button>

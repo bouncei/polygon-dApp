@@ -2,9 +2,9 @@ import React from 'react'
 
 function MainCard({ description, name, price, image, item, buyNft }) {
   return (
-    <div className="overflow-hidden rounded-xl border shadow">
+    <div className="relative my-6 cursor-pointer overflow-hidden rounded-xl border bg-white shadow hover:scale-x-105 ">
       <div className="flex justify-center">
-        <img src={image} className=" h-[30vh] object-cover" />
+        <img src={image} className=" h-full w-full object-cover" />
       </div>
 
       <div className="p-4">
@@ -14,14 +14,17 @@ function MainCard({ description, name, price, image, item, buyNft }) {
         </div>
       </div>
 
-      <div className="bg-black p-4">
-        <p className="mb-4 text-2xl font-bold text-white">{price} MATIC</p>
-        <button
-          className="w-full rounded bg-red-400 py-2 px-12 font-bold text-white"
+      <div className="flex items-center justify-between p-4">
+        <div>
+          <p className="text-2xl">Price: </p>
+          <p className=" text-lg font-bold ">{price} MATIC</p>
+        </div>
+        <div
+          className=" flex-end mr-3 h-9 w-20 rounded-full bg-[#BF40BF] pt-1 text-center font-bold text-white hover:bg-[#d279d2]"
           onClick={() => buyNft(item)}
         >
           Buy
-        </button>
+        </div>
       </div>
     </div>
   )
