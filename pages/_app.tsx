@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LoadingScreen from "../components/preloader/LoadingScreen";
-import Hero from '../components/Hero'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router])
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden bg-[#E5E5E5]'>
       <Head>
         <title>Base Market</title>
         <link rel='icon' href='/influencers-icon-5-2.png' />
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <LoadingScreen loading={loading} />
         <Component {...pageProps} />
-        {/* <Footer /> */}
+        <Footer />
 
       </>
     </div>

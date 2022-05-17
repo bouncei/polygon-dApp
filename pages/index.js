@@ -4,7 +4,7 @@ import axios from 'axios'
 import Web3Modal from 'web3modal'
 
 import { nftaddress, nftmarketaddress } from '../config'
-
+import MainCard from '../components/MainCard'
 // Importing the ContractABIs
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
@@ -82,33 +82,14 @@ const Home = () => {
         <div className="max-w-screen-2xl px-4">
           <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
             {nfts.map((item, index) => (
-              <div
+              <MainCard
                 key={index}
-                className="overflow-hidden rounded-xl border shadow"
-              >
-                <div className="flex justify-center">
-                  <img src={item.image} className=" h-[30vh] object-cover" />
-                </div>
-
-                <div className="p-4">
-                  <p className="h-16 text-2xl font-semibold">{item.name}</p>
-                  <div className="h-20 overflow-hidden text-xl">
-                    <p className="text-grey-400">{item.description}</p>
-                  </div>
-                </div>
-
-                <div className="bg-black p-4">
-                  <p className="mb-4 text-2xl font-bold text-white">
-                    {item.price} MATIC
-                  </p>
-                  <button
-                    className="w-full rounded bg-red-400 py-2 px-12 font-bold text-white"
-                    onClick={() => buyNft(item)}
-                  >
-                    Buy
-                  </button>
-                </div>
-              </div>
+                image={item.image}
+                description={item.description}
+                name={item.name}
+                item={item}
+                buyNft={() => buyNft(item)}
+              />
             ))}
           </div>
         </div>
