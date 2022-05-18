@@ -34,8 +34,8 @@ const Hero = () => {
               Create, collect, and sell extraordinary NFTs.
             </div>
             <div className={style.description}>
-              BaseMarket is on of the world&apos;s largest and most reliable NFT
-              marketplace built on the Ethereum blockchain.
+              BaseMarket is one of the world&apos;s largest and most reliable
+              NFT marketplace built on the Ethereum blockchain.
             </div>
 
             <div className={style.ctaContainer}>

@@ -21,7 +21,7 @@ function Footer() {
 
               <div className=" text-2xl font-bold">
                 <span className="hover:scale-102 transform pr-4 transition duration-200 ease-out hover:text-[#222] ">
-                  BaseMint
+                  BaseMarket
                 </span>
               </div>
             </div>
@@ -29,10 +29,10 @@ function Footer() {
           </Link>
 
           <p className={style.ptag}>
-            Base Mint is the largest and most active NFT marketplace on the
-            Ethereum blockchain. Through BaseMint, anybody can easily and
-            quickly, mint, and buy NFTs at a fraction of the cost of other NFT
-            platforms. Base Mint also provides feeless NFT transfers.
+            BaseMarket is the largest and most active NFT marketplace on the
+            Ethereum blockchain. Through BaseMarket, anybody can easily and
+            quickly create, mint, and buy NFTs at a fraction of the cost of
+            other NFT platforms. BaseMarket also provides feeless NFT transfers.
           </p>
         </div>
         <div className={style.mainDiv}>

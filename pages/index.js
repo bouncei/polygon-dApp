@@ -9,6 +9,7 @@ import MainCard from '../components/MainCard'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 import Hero from '../components/Hero'
+import HomeCard from '../components/HomeCard'
 const Home = () => {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
@@ -78,6 +79,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <HomeCard />
     </>
   )
 }

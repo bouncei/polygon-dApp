@@ -53,7 +53,7 @@ const Header = () => {
             <div className={style.headerItem}>Explore</div>
           </Link>
           <Link href="/create-nft">
-            <div className={style.headerItem}>Create Asset</div>
+            <div className={style.headerItem}>Create</div>
           </Link>
           <Link href="/my-nfts">
             <div className={style.headerItem}>My Assets</div>
