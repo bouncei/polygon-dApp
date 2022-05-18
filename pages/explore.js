@@ -9,7 +9,8 @@ import MainCard from '../components/MainCard'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 import Hero from '../components/Hero'
-const Home = () => {
+
+const Explore = () => {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
 
@@ -73,13 +74,43 @@ const Home = () => {
   }
 
   if (loadingState === 'loaded' && !nfts.length)
-    return <h1 className="px-20 py-10 text-3xl">No NFTs in the marketplace</h1>
+    return (
+      <h1 className="p-5 py-20 text-center text-4xl font-medium">
+        No NFTs in the marketplace{' '}
+        <a
+          href="/create-nft"
+          className=" text-blue-400 hover:text-blue-300 hover:underline"
+        >
+          create
+        </a>{' '}
+        a digital asset.
+      </h1>
+    )
 
   return (
     <>
-      <Hero />
+      <h1 className="p-5 py-20 text-center text-4xl font-medium">
+        Explore NFTs
+      </h1>
+      <div className="mt-10 flex justify-center">
+        <div className="max-w-screen-2xl px-4">
+          <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4 ">
+            {nfts.map((item, index) => (
+              <MainCard
+                key={index}
+                image={item.image}
+                description={item.description}
+                name={item.name}
+                item={item}
+                price={item.price}
+                buyNft={() => buyNft(item)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
-export default Home
+export default Explore

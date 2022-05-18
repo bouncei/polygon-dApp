@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
 
             <div className={style.ctaContainer}>
-              <Link href="/collections">
+              <Link href="/explore">
                 <button className={style.accentedButton}>Explore NFTs</button>
               </Link>
               <Link href="/create-nft">

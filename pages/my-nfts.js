@@ -57,7 +57,18 @@ function MyNFTs() {
   }
 
   if (loadingState === 'loaded' && !assets.length)
-    return <h1 className="px-20 py-10 text-3xl">No assets owned</h1>
+    return (
+      <h1 className="px-20 py-10 text-3xl">
+        No assets owned{' '}
+        <a
+          href="/explore"
+          className=" text-blue-400 hover:text-blue-300 hover:underline"
+        >
+          buy
+        </a>{' '}
+        a digital asset.
+      </h1>
+    )
 
   return (
     <div className="flex justify-center">

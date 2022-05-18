@@ -7,9 +7,9 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 const style = {
-  wrapper: `w-screen px-[1.2rem] py-[0.8rem] `,
+  wrapper: `w-screen px-[2.8rem] md:px-[1.2rem] py-[0.8rem] `,
   logoContainer: `flex items-center cursor-pointer`,
-  logoText: ` ml-[0.8rem] text-[#222] font-semibold text-2xl`,
+  logoText: ` ml-[0.3rem] text-[#222] font-semibold text-2xl`,
   searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center md:outline outline-1 rounded-[0.8rem] text-[#b1b3b5] `,
   searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,
   searchInput: `h-[2.6rem] w-full border-0 bg-transparent outline-0 ring-0 px-2 pl-0 text-[#e6e8eb] placeholder:text-[#8a939b] text-[#434445]`,
@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div className={style.wrapper}>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between space-x-5">
         {/* Brand Logo and Name*/}
         <Link href="/">
           <span className={style.logoContainer}>
@@ -49,17 +49,15 @@ const Header = () => {
         </div>
 
         <div className={style.headerItems}>
-          <Link href="/">
-            <div className={style.headerItem}>Home</div>
+          <Link href="/explore">
+            <div className={style.headerItem}>Explore</div>
           </Link>
-
           <Link href="/create-nft">
             <div className={style.headerItem}>Create Asset</div>
           </Link>
           <Link href="/my-nfts">
             <div className={style.headerItem}>My Assets</div>
           </Link>
-
           <Link href="/dashboard">
             <div className={style.headerItem}>Dashboard</div>
           </Link>

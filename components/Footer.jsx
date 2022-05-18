@@ -7,6 +7,7 @@ const style = {
   mainDiv: `space-y-4 text-grey-800 text-xs`,
   h5Element: `font-bold text-lg `,
   ptag: `text-base text-left`,
+  click: `transform cursor-pointer text-base transition duration-200 ease-out hover:text-[#222] hover:underline`,
 }
 
 function Footer() {
@@ -15,11 +16,11 @@ function Footer() {
       <div className={style.mainContainer}>
         <div className={style.mainDiv}>
           <Link href="/">
-            <div className="flex cursor-pointer items-center space-x-4">
+            <div className="flex cursor-pointer items-center space-x-2">
               <Image src={appLogo} height={40} width={40} />
 
               <div className=" text-2xl font-bold">
-                <span className="hover:scale-102 transform pr-4 transition duration-200 ease-out hover:text-white ">
+                <span className="hover:scale-102 transform pr-4 transition duration-200 ease-out hover:text-[#222] ">
                   BaseMint
                 </span>
               </div>
@@ -36,80 +37,56 @@ function Footer() {
         </div>
         <div className={style.mainDiv}>
           <h5 className={style.h5Element}>GENERAL</h5>
-          <Link href="/collections">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Explore
-            </div>
+          <Link href="/explore">
+            <div className={style.click}>Explore</div>
           </Link>
 
-          <Link href="/collections">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              All Collections
-            </div>
+          <Link href="/create-nft">
+            <div className={style.click}>Create Asset</div>
           </Link>
 
           <Link href="/allnfts">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              All NFTs
-            </div>
+            <div className={style.click}>My Assets</div>
           </Link>
-          <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Stats
-            </div>
+          <Link href="/dashboard">
+            <div className={style.click}>Dashboard</div>
           </Link>
         </div>
 
         <div className={style.mainDiv}>
           <h5 className={style.h5Element}>HOST</h5>
-          <Link href="/collections">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Explore
-            </div>
+          <Link href="/explore">
+            <div className={style.click}>Explore</div>
           </Link>
 
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Auctions
-            </div>
+            <div className={style.click}>Auctions</div>
           </Link>
 
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Offers
-            </div>
+            <div className={style.click}>Offers</div>
           </Link>
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Stats
-            </div>
+            <div className={style.click}>Stats</div>
           </Link>
         </div>
 
         <div className={style.mainDiv}>
           <h5 className={style.h5Element}>ECOSYSTEM</h5>
-          <Link href="/collections">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Buy Mint Token
-            </div>
+          <Link href="/explore">
+            <div className={style.click}>Buy Mint Token</div>
           </Link>
 
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Trade Mint
-            </div>
+            <div className={style.click}>Trade Mint</div>
           </Link>
 
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline ">
-              Mint RIch List
-            </div>
+            <div className={style.click}>Mint RIch List</div>
           </Link>
 
           <Link href="/">
-            <div className="transform cursor-pointer text-base transition duration-200 ease-out hover:text-white hover:underline">
-              Mint Telegram
-            </div>
+            <div className={style.click}>Mint Telegram</div>
           </Link>
         </div>
       </div>

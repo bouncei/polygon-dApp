@@ -90,6 +90,9 @@ export default function CreateItem() {
 
   return (
     <div className="overflow-hidden">
+      <h1 className="p-5 py-20 text-center text-4xl font-medium">
+        Create Digital Asset
+      </h1>
       <div className="flex justify-center">
         <div className="flex w-1/2 flex-col pb-12">
           <input
