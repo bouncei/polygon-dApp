@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MdOutlineCancel } from 'react-icons/md'
+import { TransactionContext } from '../../context/TransactionContext'
 
-const Connect = ({ set }) => {
+const Connect = ({ set, yes }) => {
+  const { metaWallet, walletConnectWallet, currentAccount } =
+    useContext(TransactionContext)
+
+  console.log(currentAccount, metaWallet, walletConnectWallet)
+
   return (
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
@@ -30,7 +36,9 @@ const Connect = ({ set }) => {
                 <li className="py-1">
                   <div
                     className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
-                    onClick={() => {}}
+                    onClick={() => {
+                      metaWallet()
+                    }}
                   >
                     {/* Add Image */}
                     <div></div>
@@ -43,7 +51,7 @@ const Connect = ({ set }) => {
                 <li className="py-1">
                   <div
                     className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
-                    onClick={() => {}}
+                    onClick={() => yes()}
                   >
                     {/* Add Image */}
                     <div></div>

@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import LoadingScreen from "../components/preloader/LoadingScreen";
+import { TransactionProvider } from "../context/TransactionContext"
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -26,26 +27,28 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router])
 
   return (
-    <div className='overflow-hidden bg-[#E5E5E5]'>
-      <Head>
-        <title>Base Market</title>
-        <link rel='icon' href='/influencers-icon-5-2.png' />
-      </Head>
+    <TransactionProvider>
+      <div className='overflow-hidden bg-[#E5E5E5]'>
+        <Head>
+          <title>Base Market</title>
+          <link rel='icon' href='/influencers-icon-5-2.png' />
+        </Head>
 
-      <>
-
-
-        <Header />
-        {/* <Hero /> */}
+        <>
 
 
+          <Header />
+          {/* <Hero /> */}
 
-        <LoadingScreen loading={loading} />
-        <Component {...pageProps} />
-        <Footer />
 
-      </>
-    </div>
+
+          <LoadingScreen loading={loading} />
+          <Component {...pageProps} />
+          <Footer />
+
+        </>
+      </div>
+    </TransactionProvider>
 
   )
 }
