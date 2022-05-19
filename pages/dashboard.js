@@ -58,13 +58,24 @@ function Dashboard() {
 
   if (loadingState === 'loaded' && !assets.length)
     return (
-      <h1 className="px-20 py-10 text-3xl">No asset in creator dashboard</h1>
+      <h1 className="p-5 py-20 text-center text-4xl font-medium">
+        No asset in creator dashboard{' '}
+        <a
+          href="/create-nft"
+          className=" text-blue-400 hover:text-blue-300 hover:underline"
+        >
+          create
+        </a>{' '}
+        a digital asset.
+      </h1>
     )
 
   return (
     <div>
       <div className="p-4">
-        <h2 className="py-2 text-2xl">Assets Listed</h2>
+        <h2 className="p-5  py-2 text-left text-3xl font-medium">
+          Assets Listed
+        </h2>
         <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
           {assets.map((nft, i) => (
             <div key={i} className="overflow-hidden rounded-xl border shadow">

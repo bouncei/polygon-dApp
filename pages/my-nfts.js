@@ -58,7 +58,7 @@ function MyNFTs() {
 
   if (loadingState === 'loaded' && !assets.length)
     return (
-      <h1 className="px-20 py-10 text-3xl">
+      <h1 className="p-5 py-20 text-center text-4xl font-medium">
         No assets owned{' '}
         <a
           href="/explore"
