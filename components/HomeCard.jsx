@@ -31,6 +31,7 @@ const HomeCard = () => {
         {/*Right Part */}
         <div className=" mt-20 mb-10 grid grid-cols-2 gap-9">
           <Tabs
+            li={'create'}
             icon={<IoIosWallet />}
             title="Set up your wallet"
             text="Once you’ve set up your wallet of choice connect it to BaseMarket"

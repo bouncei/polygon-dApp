@@ -1,5 +1,4 @@
 import React from 'react'
-import { IoWallet } from 'react-icons/io'
 
 const Tabs = ({ icon, title, text }) => {
   return (

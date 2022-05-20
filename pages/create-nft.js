@@ -63,7 +63,11 @@ export default function CreateItem() {
   async function CreateSale(url) {
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
+
+    console.log('The connection has been activated', connection)
     const provider = new ethers.providers.Web3Provider(connection)
+    console.log('The provider', provider)
+
     const signer = provider.getSigner()
 
     let contract = new ethers.Contract(nftaddress, NFT.abi, signer)

@@ -72,8 +72,8 @@ function Dashboard() {
 
   return (
     <div>
-      <div className="p-4">
-        <h2 className="p-5  py-2 text-left text-3xl font-medium">
+      <div className="m-4 p-4">
+        <h2 className="p-5 py-2 text-left text-3xl font-medium">
           Assets Listed
         </h2>
         <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -96,31 +96,6 @@ function Dashboard() {
       </div>
 
       {/*Sold Items */}
-      <div px-4>
-        {sold && (
-          <div className="">
-            <h2 className="py-2 text-2xl">Assets Sold</h2>
-            <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
-              {sold.map((item, i) => (
-                <div
-                  key={i}
-                  className="overflow-hidden rounded-xl border shadow"
-                >
-                  <img
-                    src={item.image}
-                    className="h-[30vh] rounded object-cover"
-                  />
-                  <div className="bg-black p-4">
-                    <p className="text-2xl font-bold text-white">
-                      Price - {item.price} Eth
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
     </div>
   )
 }

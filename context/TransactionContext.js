@@ -22,9 +22,9 @@ if (typeof window !== 'undefined') {
   eth = window.ethereum
 
   web3modal = new web3Modal({
-    network: 'mainnet',
+    // network: 'mainnet',
     cacheProvider: true,
-    providerOptions: provider_options,
+    provider_options,
   })
 }
 

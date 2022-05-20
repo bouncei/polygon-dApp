@@ -73,12 +73,6 @@ const Header = () => {
     setUserName(finalStr)
   }, [currentAccount])
 
-  const yess = async () => {
-    const provider = await web3modal.connect()
-    const web3 = new Web3(provider)
-
-    console.log('yes boss')
-  }
   return (
     <div className={style.wrapper}>
       <div className="flex items-center justify-between space-x-3   ">
@@ -139,9 +133,7 @@ const Header = () => {
             </Link>
           </div>
         )}
-        {showModal ? (
-          <Connect set={() => setShowModal()} yes={() => yess()} />
-        ) : null}
+        {showModal ? <Connect set={() => setShowModal()} /> : null}
       </div>
     </div>
   )
