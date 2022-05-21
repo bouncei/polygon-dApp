@@ -13,7 +13,7 @@ module.exports = {
       chainId: 1337,
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
+      url: `https://rpc-mumbai.matic.today`,
       accounts: [
         'fc4d76cdf3720818a6b966b5356fce24f8b729a32b101d59003046a33c7a9c52',
       ],

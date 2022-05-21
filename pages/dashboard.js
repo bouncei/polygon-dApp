@@ -8,6 +8,8 @@ import { nftaddress, nftmarketaddress } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+import Image from 'next/image'
+import Link from 'next/link'
 
 function Dashboard() {
   const [assets, setAssets] = useState([])
@@ -60,12 +62,12 @@ function Dashboard() {
     return (
       <h1 className="p-5 py-20 text-center text-4xl font-medium">
         No asset in creator dashboard{' '}
-        <a
+        <Link
           href="/create-nft"
           className=" text-blue-400 hover:text-blue-300 hover:underline"
         >
           create
-        </a>{' '}
+        </Link>{' '}
         a digital asset.
       </h1>
     )
@@ -83,6 +85,7 @@ function Dashboard() {
                 <img
                   src={nft.image}
                   className=" h-full w-full rounded object-cover md:aspect-auto md:h-[30vh]"
+                  // layout="fill"
                 />
               </div>
               <div className="bg-[#d279d2] p-4">

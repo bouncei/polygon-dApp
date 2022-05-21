@@ -9,6 +9,7 @@ import MainCard from '../components/MainCard'
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 import Hero from '../components/Hero'
+import Link from 'next/link'
 
 const Explore = () => {
   const [nfts, setNfts] = useState([])
@@ -19,7 +20,7 @@ const Explore = () => {
     loadNFTs()
   }, [])
 
-  async function loadNFTs() {
+  const loadNFTs = async () => {
     const provider = new ethers.providers.JsonRpcProvider(
       'https://rpc-mumbai.matic.today'
     )
@@ -79,12 +80,12 @@ const Explore = () => {
     return (
       <h1 className="p-5 py-20 text-center text-4xl font-medium">
         No NFTs in the marketplace{' '}
-        <a
+        <Link
           href="/create-nft"
           className=" text-blue-400 hover:text-blue-300 hover:underline"
         >
           create
-        </a>{' '}
+        </Link>{' '}
         a digital asset.
       </h1>
     )

@@ -51,14 +51,11 @@ const Connect = ({ set }) => {
                     }}
                   >
                     {/* Add Image */}
-                    <Image
-                      src={meta}
-                      height={43}
-                      width={43}
-                      className="rounded-xl object-contain"
-                    />
-                    <span class="ml-3 flex-1 whitespace-nowrap">MetaMask</span>
-                    <span class="ml-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+                    <Image src={meta} height={43} width={43} />
+                    <span className="ml-3 flex-1 whitespace-nowrap">
+                      MetaMask
+                    </span>
+                    <span className="ml-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
                       Popular
                     </span>
                   </div>
@@ -76,7 +73,7 @@ const Connect = ({ set }) => {
                       className="rounded-xl object-contain"
                     />
 
-                    <span class="ml-3 flex-1 whitespace-nowrap">
+                    <span className="ml-3 flex-1 whitespace-nowrap">
                       Wallet Connect
                     </span>
                   </div>
@@ -94,7 +91,7 @@ const Connect = ({ set }) => {
                       className="rounded-xl object-contain"
                     />
 
-                    <span class="ml-3 flex-1 whitespace-nowrap">
+                    <span className="ml-3 flex-1 whitespace-nowrap">
                       Coinbase Wallet
                     </span>
                   </div>
@@ -112,7 +109,7 @@ const Connect = ({ set }) => {
                       className="rounded-xl object-contain"
                     />
 
-                    <span class="ml-3 flex-1 whitespace-nowrap">
+                    <span className="ml-3 flex-1 whitespace-nowrap">
                       Trust Wallet
                     </span>
                   </div>
@@ -130,7 +127,9 @@ const Connect = ({ set }) => {
                       className="rounded-xl object-contain"
                     />
 
-                    <span class="ml-3 flex-1 whitespace-nowrap">Fortmatic</span>
+                    <span className="ml-3 flex-1 whitespace-nowrap">
+                      Fortmatic
+                    </span>
                   </div>
                 </li>
               </ul>

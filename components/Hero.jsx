@@ -1,4 +1,5 @@
 // import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import sponsor from '../assets/poly.png'
@@ -54,18 +55,21 @@ const Hero = () => {
               className="h-[44vh] rounded-t-lg object-cover"
               src="https://miro.medium.com/max/1400/1*QlOZvT7jtuWMPzQYtg03uQ.jpeg"
               alt="image"
+              // layout="fill"
             />
 
             <div className={style.infoContainer}>
               <div className={style.author}>
                 <div className={style.name}>Sponsored by: </div>
               </div>
-              <a href=" https://docs.polygon.technology/">
+              <Link href=" https:/docs.polygon.technology">
                 <img
-                  className={style.profileimg}
+                  className={`${style.profileimg} cursor-pointer`}
                   src="https://cdn.iconscout.com/icon/free/png-256/polygon-badge-4086732-3379861.png"
+                  alt='"image'
+                  // layout="fill"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

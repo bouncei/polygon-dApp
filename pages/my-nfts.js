@@ -8,6 +8,8 @@ import { nftaddress, nftmarketaddress } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+import Image from 'next/image'
+import Link from 'next/link'
 
 function MyNFTs() {
   const [assets, setAssets] = useState([])
@@ -60,12 +62,12 @@ function MyNFTs() {
     return (
       <h1 className="p-5 py-20 text-center text-4xl font-medium">
         No assets owned{' '}
-        <a
+        <Link
           href="/explore"
           className=" text-blue-400 hover:text-blue-300 hover:underline"
         >
           buy
-        </a>{' '}
+        </Link>{' '}
         a digital asset.
       </h1>
     )

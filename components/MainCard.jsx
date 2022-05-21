@@ -1,5 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
+import Image from 'next/image'
 
 function MainCard({ description, name, price, image, item, buyNft }) {
   return (
@@ -14,7 +15,7 @@ function MainCard({ description, name, price, image, item, buyNft }) {
       }}
     >
       <div className="flex justify-center">
-        <img src={image} className=" h-[33vh] w-full object-cover " />
+        <Image src={image} className=" h-[33vh] w-full object-cover " />
       </div>
 
       <div className="p-4">
