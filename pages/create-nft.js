@@ -66,12 +66,13 @@ export default function CreateItem() {
 
     console.log('The connection has been activated', connection)
     const provider = new ethers.providers.Web3Provider(connection)
-    console.log('The provider', provider)
+    // console.log('The provider', provider)
 
     const signer = provider.getSigner()
 
     let contract = new ethers.Contract(nftaddress, NFT.abi, signer)
     let transaction = await contract.createToken(url)
+    console.log('1st', transaction)
     let tx = await transaction.wait()
 
     let event = tx.events[0]
@@ -87,6 +88,7 @@ export default function CreateItem() {
     transaction = await contract.createMarketItem(nftaddress, tokenId, price, {
       value: listingPrice,
     })
+    console.log('2nd', transaction)
 
     await transaction.wait()
     router.push('/')

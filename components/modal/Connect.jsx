@@ -1,8 +1,19 @@
 import React, { useContext } from 'react'
 import { MdOutlineCancel } from 'react-icons/md'
 import { TransactionContext } from '../../context/TransactionContext'
+import base from '../../assets/base.png'
+import fort from '../../assets/fort.png'
+import waco from '../../assets/waco.jpg'
+import trust from '../../assets/trust.png'
+import meta from '../../assets/metaIcon.png'
 
-const Connect = ({ set, yes }) => {
+import Image from 'next/image'
+
+const style = {
+  icons: `flex `,
+}
+
+const Connect = ({ set }) => {
   const { metaWallet, walletConnectWallet, currentAccount } =
     useContext(TransactionContext)
 
@@ -41,7 +52,12 @@ const Connect = ({ set, yes }) => {
                     }}
                   >
                     {/* Add Image */}
-                    <div></div>
+                    <Image
+                      src={meta}
+                      height={43}
+                      width={43}
+                      className="rounded-xl object-contain"
+                    />
                     <span class="ml-3 flex-1 whitespace-nowrap">MetaMask</span>
                     <span class="ml-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
                       Popular
@@ -51,10 +67,16 @@ const Connect = ({ set, yes }) => {
                 <li className="py-1">
                   <div
                     className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
-                    onClick={() => yes()}
+                    // onClick={}
                   >
                     {/* Add Image */}
-                    <div></div>
+                    <Image
+                      src={waco}
+                      height={43}
+                      width={43}
+                      className="rounded-xl object-contain"
+                    />
+
                     <span class="ml-3 flex-1 whitespace-nowrap">
                       Wallet Connect
                     </span>
@@ -66,7 +88,13 @@ const Connect = ({ set, yes }) => {
                     onClick={() => {}}
                   >
                     {/* Add Image */}
-                    <div></div>
+                    <Image
+                      src={base}
+                      height={43}
+                      width={43}
+                      className="rounded-xl object-contain"
+                    />
+
                     <span class="ml-3 flex-1 whitespace-nowrap">
                       Coinbase Wallet
                     </span>
@@ -78,7 +106,13 @@ const Connect = ({ set, yes }) => {
                     onClick={() => {}}
                   >
                     {/* Add Image */}
-                    <div></div>
+                    <Image
+                      src={trust}
+                      height={43}
+                      width={43}
+                      className="rounded-xl object-contain"
+                    />
+
                     <span class="ml-3 flex-1 whitespace-nowrap">
                       Trust Wallet
                     </span>
@@ -90,7 +124,13 @@ const Connect = ({ set, yes }) => {
                     onClick={() => {}}
                   >
                     {/* Add Image */}
-                    <div></div>
+                    <Image
+                      src={fort}
+                      height={43}
+                      width={43}
+                      className="rounded-xl object-contain"
+                    />
+
                     <span class="ml-3 flex-1 whitespace-nowrap">Fortmatic</span>
                   </div>
                 </li>

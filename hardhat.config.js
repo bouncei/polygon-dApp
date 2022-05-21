@@ -18,7 +18,7 @@ module.exports = {
         'fc4d76cdf3720818a6b966b5356fce24f8b729a32b101d59003046a33c7a9c52',
       ],
     },
-    mainet: {
+    mainnet: {
       url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
       accounts: [
         'fc4d76cdf3720818a6b966b5356fce24f8b729a32b101d59003046a33c7a9c52',
