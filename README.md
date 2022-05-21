@@ -1,15 +1,15 @@
-# Basic Sample Hardhat Project
+Project Name
+Polygon dApp
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Project Code
+Repo - https://github.com/bouncei/polygon-dApp
 
-Try running some of the following tasks:
+Working App
+Website (WIP) - https://polygon-d-ise7n2ukk-bouncei.vercel.app/
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+
+Contact Info
+Discord ID - bouncei#1342
+Email ID - joshuainyang255@gmail.com
+Gitcoin - bouncei
+Twitter - @InyangJoshua8
