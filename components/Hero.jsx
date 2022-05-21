@@ -55,6 +55,9 @@ const Hero = () => {
               className="h-[44vh] rounded-t-lg object-cover"
               src="https://miro.medium.com/max/1400/1*QlOZvT7jtuWMPzQYtg03uQ.jpeg"
               alt="image"
+              // height={100}
+              // width={100}
+
               // layout="fill"
             />
 
