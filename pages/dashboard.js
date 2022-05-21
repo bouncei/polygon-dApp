@@ -81,12 +81,13 @@ function Dashboard() {
         <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
           {assets.map((nft, i) => (
             <div key={i} className="overflow-hidden rounded-xl border shadow">
-              <div className="flex justify-center ">
+              <div className="flex justify-center">
                 <Image
                   src={nft.image}
                   className=" h-full w-full rounded object-cover md:aspect-auto md:h-[30vh]"
                   width={175}
                   height={175}
+                  alt="f"
                 />
               </div>
               <div className="bg-[#d279d2] p-4">

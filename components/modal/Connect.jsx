@@ -51,7 +51,7 @@ const Connect = ({ set }) => {
                     }}
                   >
                     {/* Add Image */}
-                    <Image src={meta} height={43} width={43} />
+                    <Image src={meta} height={43} width={43} alt="connect" />
                     <span className="ml-3 flex-1 whitespace-nowrap">
                       MetaMask
                     </span>
@@ -69,6 +69,7 @@ const Connect = ({ set }) => {
                     <Image
                       src={waco}
                       height={43}
+                      alt="connect"
                       width={43}
                       className="rounded-xl object-contain"
                     />
@@ -88,6 +89,7 @@ const Connect = ({ set }) => {
                       src={base}
                       height={43}
                       width={43}
+                      alt="connect"
                       className="rounded-xl object-contain"
                     />
 
@@ -106,6 +108,7 @@ const Connect = ({ set }) => {
                       src={trust}
                       height={43}
                       width={43}
+                      alt="connect"
                       className="rounded-xl object-contain"
                     />
 
@@ -124,6 +127,7 @@ const Connect = ({ set }) => {
                       src={fort}
                       height={43}
                       width={43}
+                      alt="connect"
                       className="rounded-xl object-contain"
                     />
 

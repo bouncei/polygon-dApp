@@ -78,7 +78,13 @@ function MyNFTs() {
         <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
           {assets.map((item, i) => (
             <div key={i} className="overflow-hidden rounded-xl border shadow">
-              <img src={item.image} className="rounded" />
+              <Image
+                src={item.image}
+                className="rounded"
+                alt="d"
+                height={300}
+                width={300}
+              />
               <div className="bg-black p-4">
                 <p className="text-2xl font-bold text-white">
                   Price - {item.price} Eth

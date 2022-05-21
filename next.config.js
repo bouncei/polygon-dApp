@@ -2,6 +2,6 @@
 module.exports = {
   // reactStrictMode: true,
   images: {
-    domains: ['ipfs.infura.io', 'miro.medium.com'],
+    domains: ['ipfs.infura.io', 'miro.medium.com', 'cdn.iconscout.com'],
   },
 }

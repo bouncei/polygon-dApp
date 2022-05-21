@@ -20,6 +20,7 @@ function MainCard({ description, name, price, image, item, buyNft }) {
           className=" h-[33vh] w-full object-cover "
           height={100}
           width={100}
+          alt="card"
         />
       </div>
 

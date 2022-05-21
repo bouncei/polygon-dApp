@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import sponsor from '../assets/poly.png'
+import matic from '../assets/t.jpeg'
 // import profileIcon from '../assets/dk.png'
 
 const style = {
@@ -51,12 +52,12 @@ const Hero = () => {
           </div>
 
           <div className={style.cardContainer}>
-            <img
+            <Image
               className="h-[44vh] rounded-t-lg object-cover"
-              src="https://miro.medium.com/max/1400/1*QlOZvT7jtuWMPzQYtg03uQ.jpeg"
+              src={matic}
               alt="image"
-              // height={100}
-              // width={100}
+              height={400}
+              width={700}
 
               // layout="fill"
             />
@@ -66,10 +67,12 @@ const Hero = () => {
                 <div className={style.name}>Sponsored by: </div>
               </div>
               <Link href=" https:/docs.polygon.technology">
-                <img
+                <Image
                   className={`${style.profileimg} cursor-pointer`}
                   src="https://cdn.iconscout.com/icon/free/png-256/polygon-badge-4086732-3379861.png"
                   alt='"image'
+                  height={200}
+                  width={200}
                   // layout="fill"
                 />
               </Link>

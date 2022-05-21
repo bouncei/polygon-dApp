@@ -13,7 +13,7 @@ import HomeCard from '../components/HomeCard'
 // import Connect from '../components/modal/Connect'
 
 const Home = () => {
-  localStorage.setItem('details', '')
+  // localStorage.setItem('details', '')
   return (
     <>
       <Hero />
