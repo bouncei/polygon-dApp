@@ -127,10 +127,12 @@ export default function CreateItem() {
 
           <input type="file" name="NFT" className="my-4" onChange={onChange} />
           {fileUrl && (
-            <img
-              className="mt-4 h-80 w-80 rounded-lg object-contain"
+            <Image
+              className="mt-4 rounded-lg object-contain"
               src={fileUrl}
               alt=""
+              height={190}
+              width={190}
             />
           )}
 

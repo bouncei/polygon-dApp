@@ -15,7 +15,12 @@ function MainCard({ description, name, price, image, item, buyNft }) {
       }}
     >
       <div className="flex justify-center">
-        <Image src={image} className=" h-[33vh] w-full object-cover " />
+        <Image
+          src={image}
+          className=" h-[33vh] w-full object-cover "
+          height={100}
+          width={100}
+        />
       </div>
 
       <div className="p-4">

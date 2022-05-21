@@ -79,7 +79,7 @@ const Header = () => {
         {/* Brand Logo and Name*/}
         <Link href="/">
           <span className={style.logoContainer}>
-            <Image src={appLogo} height={40} width={40} />
+            <Image src={appLogo} height={40} width={40} alt="" />
             <div className={style.logoText}>BaseMarket</div>
           </span>
         </Link>
