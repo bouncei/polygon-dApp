@@ -64,7 +64,7 @@ export default function CreateItem() {
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
 
-    console.log('The connection has been activated', connection)
+    // console.log('The connection has been activated', connection)
     const provider = new ethers.providers.Web3Provider(connection)
     // console.log('The provider', provider)
 
@@ -72,7 +72,7 @@ export default function CreateItem() {
 
     let contract = new ethers.Contract(nftaddress, NFT.abi, signer)
     let transaction = await contract.createToken(url)
-    console.log('1st', transaction)
+    // console.log('1st', transaction)
     let tx = await transaction.wait()
 
     let event = tx.events[0]
@@ -88,7 +88,7 @@ export default function CreateItem() {
     transaction = await contract.createMarketItem(nftaddress, tokenId, price, {
       value: listingPrice,
     })
-    console.log('2nd', transaction)
+    // console.log('2nd', transaction)
 
     await transaction.wait()
     router.push('/')

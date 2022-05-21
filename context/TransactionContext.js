@@ -45,7 +45,7 @@ export const TransactionProvider = ({ children }) => {
       setCurrentAcount(accounts[0])
       setShowModal(false)
 
-      console.log(currentAccount, 'yes boss this is for metamask ')
+      // console.log(currentAccount, 'yes boss this is for metamask ')
     } catch (error) {
       console.error(error)
       throw new Error('No ethereum object')
@@ -60,7 +60,7 @@ export const TransactionProvider = ({ children }) => {
 
       if (accounts.length) {
         setCurrentAcount(accounts[0])
-        console.log('wallet already collected')
+        // console.log('wallet already collected')
       }
     } catch (error) {
       console.error(error)
@@ -72,7 +72,7 @@ export const TransactionProvider = ({ children }) => {
     const provider = await web3modal.connect()
     const web3 = new Web3(provider)
 
-    console.log('yes boss')
+    // console.log('yes boss')
   }
 
   return (

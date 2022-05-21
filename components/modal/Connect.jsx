@@ -17,7 +17,7 @@ const Connect = ({ set }) => {
   const { metaWallet, walletConnectWallet, currentAccount } =
     useContext(TransactionContext)
 
-  console.log(currentAccount, metaWallet, walletConnectWallet)
+  // console.log(currentAccount, metaWallet, walletConnectWallet)
 
   return (
     <>
