@@ -7,12 +7,12 @@ function MainCard({ description, name, price, image, item, buyNft }) {
     <div
       className="relative my-6 overflow-hidden rounded-xl border bg-white shadow  
     "
-      onClick={() => {
-        localStorage.setItem('details', JSON.stringify(item))
-        Router.push({
-          pathname: `nfts/${name}`,
-        })
-      }}
+      // onClick={() => {
+      //   localStorage.setItem('details', JSON.stringify(item))
+      //   Router.push({
+      //     pathname: `nfts/${name}`,
+      //   })
+      // }}
     >
       <div className="flex justify-center">
         <Image
