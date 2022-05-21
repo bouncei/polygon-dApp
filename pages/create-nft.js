@@ -129,6 +129,7 @@ export default function CreateItem() {
             <img
               className="mt-4 h-80 w-80 rounded-lg object-contain"
               src={fileUrl}
+              alt=""
             />
           )}
 
