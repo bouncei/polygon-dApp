@@ -17,7 +17,7 @@ function Footer() {
         <div className={style.mainDiv}>
           <Link href="/">
             <div className="flex cursor-pointer items-center space-x-2">
-              <Image src={appLogo} height={40} width={40} />
+              <Image src={appLogo} height={40} width={40} alt="foot" />
 
               <div className=" text-2xl font-bold">
                 <span className="hover:scale-102 transform pr-4 transition duration-200 ease-out hover:text-[#222] ">

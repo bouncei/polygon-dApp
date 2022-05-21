@@ -21,11 +21,12 @@ const NFTImage = ({ selectedNft, alt }) => {
         </div>
       </div>
       <div>
-        <img
+        <Image
           src={selectedNft}
           alt={alt}
           className="h-full object-contain md:h-[44vh]"
-          // height={'responsive'}
+          height={350}
+          width={420} // height={'responsive'}
           // width={'responsive'}
         />
       </div>
