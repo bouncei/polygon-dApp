@@ -10,25 +10,25 @@ import Connect from './modal/Connect'
 import { TransactionContext } from '../context/TransactionContext'
 import { CgProfile } from 'react-icons/cg'
 
-import Web3 from 'web3'
-import WalletConnectProvider from '@walletconnect/web3-provider'
-import web3Modal from 'web3modal'
+// import Web3 from 'web3'
+// import WalletConnectProvider from '@walletconnect/web3-provider'
+// import web3Modal from 'web3modal'
 
-const provider_options = {
-  walletconnect: {
-    package: WalletConnectProvider,
-    options: {
-      infuraId: 'b2d351e8f6b54a4daf84e1265fb2eb98',
-    },
-  },
-}
-if (typeof window !== 'undefined') {
-  const web3modal = new web3Modal({
-    network: 'mainnet',
-    cacheProvider: true,
-    providerOptions: provider_options,
-  })
-}
+// const provider_options = {
+//   walletconnect: {
+//     package: WalletConnectProvider,
+//     options: {
+//       infuraId: 'b2d351e8f6b54a4daf84e1265fb2eb98',
+//     },
+//   },
+// }
+// if (typeof window !== 'undefined') {
+//   const web3modal = new web3Modal({
+//     network: 'mainnet',
+//     cacheProvider: true,
+//     providerOptions: provider_options,
+//   })
+// }
 
 const style = {
   wrapper: `w-screen px-[2.8rem] md:px-[1.2rem] py-[0.8rem]  `,
