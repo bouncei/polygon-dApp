@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import web3Modal from 'web3modal'
+import UAuth from '@uauth/js'
+
 // import WalletConnectProvider from '@walletconnect/web3-provider'
 // import Web3 from 'web3'
 
@@ -17,6 +19,14 @@ let web3modal
 //     },
 //   },
 // }
+
+const uauth = new UAuth({
+    clientID: 'be296b5d-0b8a-4098-a79d-f530b80e6bc1',
+    redirectUri:
+      process.env.NODE_ENV === 'production'
+        ? 'https://pullrequest.vercel.app/'
+        : 'http://localhost:3000',
+  });
 
 if (typeof window !== 'undefined') {
   eth = window.ethereum
@@ -42,6 +52,7 @@ export const TransactionProvider = ({ children }) => {
       if (!metamask) return alert('Please install a metamask extension')
 
       const accounts = await metamask.request({ method: 'eth_requestAccounts' })
+
       setCurrentAcount(accounts[0])
       setShowModal(false)
 
@@ -75,10 +86,38 @@ export const TransactionProvider = ({ children }) => {
   //   // console.log('yes boss')
   // }
 
+  const connectUnstoppable = async () => {
+    try {
+      console.log(uauth)
+      const authorization = await uauth.loginWithPopup();
+
+      if (authorization.idToken.wallet_address) {
+        setCurrentAcount(authorization.idToken.wallet_address)
+        setShowModal(false)
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const logout = async () => {
+    uauth
+    .logout()
+    .then(() => {
+      setAddress(null)
+    })
+    .catch(error => {
+      console.error('profile error:', error)
+    })
+  }
+
   return (
     <TransactionContext.Provider
       value={{
+        uauth,
         currentAccount,
+        connectUnstoppable,
+        logout,
         metaWallet,
         // walletConnectWallet,
         showModal,

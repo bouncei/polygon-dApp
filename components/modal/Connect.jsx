@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MdOutlineCancel } from 'react-icons/md'
 import { TransactionContext } from '../../context/TransactionContext'
 import base from '../../assets/base.png'
 import fort from '../../assets/fort.png'
+import ud from '../../assets/ud.png'
 import waco from '../../assets/waco.jpg'
 import trust from '../../assets/trust.png'
 import meta from '../../assets/metaIcon.png'
@@ -14,7 +15,8 @@ const style = {
 }
 
 const Connect = ({ set }) => {
-  const { metaWallet, currentAccount } = useContext(TransactionContext)
+  const { metaWallet, connectUnstoppable, logout, uauth, currentAccount } = useContext(TransactionContext)
+
 
   // console.log(currentAccount, metaWallet, walletConnectWallet)
 
@@ -57,6 +59,20 @@ const Connect = ({ set }) => {
                     </span>
                     <span className="ml-3 inline-flex items-center justify-center rounded bg-gray-200 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
                       Popular
+                    </span>
+                  </div>
+                </li>
+                <li className="py-1">
+                  <div
+                    className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+                    onClick={() => {
+                      connectUnstoppable()
+                    }}
+                  >
+                    {/* Add Image */}
+                    <Image src={ud} height={43} width={43} alt="connect" />
+                    <span className="ml-3 flex-1 whitespace-nowrap">
+                      Unstoppable Domain
                     </span>
                   </div>
                 </li>
