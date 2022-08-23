@@ -1,5 +1,4 @@
 Project Name
-<<<<<<< HEAD
 Polygon dApp Base Market
 
 Adding ud login
