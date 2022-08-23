@@ -1,0 +1,6 @@
+export const nftaddress = '0xF811B067442F68b772baAcF60218346560fD5760'
+export const nftmarketaddress = '0x517FE64a6827ac075A3558F2b2cD9f14C5b71AE0'
+
+// 0x0165878A594ca255338adfa4d48449f69242Eb8F
+
+// 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707  {marketplace}
