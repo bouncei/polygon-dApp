@@ -41,15 +41,10 @@ if (typeof window !== 'undefined') {
 export const TransactionProvider = ({ children }) => {
   const [currentAccount, setCurrentAcount] = useState()
   const [showModal, setShowModal] = useState(false)
-  const [ address, setAddress ] = useState()
 
   useEffect(() => {
     checkIfMetaWalletIsConnected()
   }, [])
-
-  const truncateAddress = (address) => {
-    return address.slice(0, 8) + '...' + address.slice(-4);
-  };
 
   // Connecting MetaMask
   const metaWallet = async (metamask = eth) => {
@@ -57,7 +52,7 @@ export const TransactionProvider = ({ children }) => {
       if (!metamask) return alert('Please install a metamask extension')
 
       const accounts = await metamask.request({ method: 'eth_requestAccounts' })
-      console.log(accounts[0])
+
       setCurrentAcount(accounts[0])
       setShowModal(false)
 
@@ -123,6 +118,11 @@ export const TransactionProvider = ({ children }) => {
         currentAccount,
         connectUnstoppable,
         logout,
+  return (
+    <TransactionContext.Provider
+      value={{
+        connectUnstoppable,
+        currentAccount,
         metaWallet,
         // walletConnectWallet,
         showModal,

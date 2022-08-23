@@ -1,4 +1,5 @@
 Project Name
+<<<<<<< HEAD
 Polygon dApp Base Market
 
 Adding ud login
@@ -20,3 +21,4 @@ Repo - https://github.com/bouncei/polygon-dApp
 
 Working Main App
 Website (WIP) - https://polygon-d-ise7n2ukk-bouncei.vercel.app/
+

@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0",
+<<<<<<< HEAD
     "@uauth/js": "^2.3.0",
+=======
+>>>>>>> 0d5187beb7bb6abf40c4752225f8b9aea7cab156
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "flowbite": "^1.4.5",

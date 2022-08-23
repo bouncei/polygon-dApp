@@ -7,6 +7,10 @@ import ud from '../../assets/ud.png'
 import waco from '../../assets/waco.jpg'
 import trust from '../../assets/trust.png'
 import meta from '../../assets/metaIcon.png'
+import waco from '../../assets/waco.jpg'
+import trust from '../../assets/trust.png'
+import meta from '../../assets/metaIcon.png'
+
 import Image from 'next/image'
 
 const style = {
@@ -15,6 +19,7 @@ const style = {
 
 const Connect = ({ set }) => {
   const { metaWallet, connectUnstoppable, logout, uauth, currentAccount } = useContext(TransactionContext)
+
 
   // console.log(currentAccount, metaWallet, walletConnectWallet)
 
