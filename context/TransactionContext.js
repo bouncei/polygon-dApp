@@ -118,11 +118,6 @@ export const TransactionProvider = ({ children }) => {
         currentAccount,
         connectUnstoppable,
         logout,
-  return (
-    <TransactionContext.Provider
-      value={{
-        connectUnstoppable,
-        currentAccount,
         metaWallet,
         // walletConnectWallet,
         showModal,
