@@ -7,9 +7,6 @@ import ud from '../../assets/ud.png'
 import waco from '../../assets/waco.jpg'
 import trust from '../../assets/trust.png'
 import meta from '../../assets/metaIcon.png'
-import waco from '../../assets/waco.jpg'
-import trust from '../../assets/trust.png'
-import meta from '../../assets/metaIcon.png'
 
 import Image from 'next/image'
 
